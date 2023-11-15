@@ -11,6 +11,7 @@ import { LoadingComponent } from './loading/loading.component';
 import { ClientsComponent } from './clients/clients.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ReservationsComponent } from './reservations/reservations.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     CarsComponent,
     LoadingComponent,
-    ClientsComponent
+    ClientsComponent,
+    ReservationsComponent
   ],
   imports: [
     BrowserModule,
