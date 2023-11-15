@@ -1,11 +1,14 @@
+<h1>Reservas</h1>
+
+  
   <label for="date-start"></label>Data inicial:
-  <input id="date-start" type="text" [(ngModel)]="reservation.start">
+  <input id="date-start" type="text" [(ngModel)]="reservation.start" placeholder="Formato yyy-mm-dd">
 
   <label for="date-end"></label>Data final:
-  <input id="date-end" type="text" [(ngModel)]="reservation.end">
+  <input id="date-end" type="text" [(ngModel)]="reservation.end" placeholder="Formato yyy-mm-dd">
 
   <label for="cliente"></label>ID do Cliente:
-  <input type="number" id="cliente" [(ngModel)]="reservation.clientId">
+  <input type="number" id="cliente" [(ngModel)]="reservation.clientId" placeholder="Digite um ID valido">
 
   <label for="carro"></label>ID do carro:
   <input type="number" id="carro" [(ngModel)]="reservation.carId">
@@ -24,6 +27,7 @@
               <th class="top center"><strong>Data final</strong></th>
               <th class="top center"><strong>Cliente</strong></th>
               <th class="top center"><strong>Carro</strong></th>
+              <th class="top center"><strong>Ações</strong></th>
           </tr>
           <tr *ngFor="let reservation of reservations">
               <td>{{reservation.start}}</td>
@@ -31,9 +35,26 @@
               <td>{{reservation.clientId}}</td>
               <td>{{reservation.carId}}</td>
               <td>
-                <button type="button">Detalhar Reserva</button>
+                <button type="button" (click)="showDetails(reservation.clientId, reservation.carId)">{{fieldButtom}}</button>
               </td>
           </tr>
       </tbody>
   </table>
+
+  <br>
+  <br>
+  <br>
+<div *ngIf="details" class="container">
+  <div class="card fucsia">
+    <h2>Detalhes da Reserva</h2>
+    <h3>Informações do cliente</h3>
+    <p>Nome: {{detailsReservation.detailClient.name}}</p>
+
+    <h3>Informações do carro</h3>
+    <p>Carro: {{detailsReservation.detailCar.model}}</p>  
+    <p>Marca: {{detailsReservation.detailCar.brand}}</p>
+    <p>Cor: {{detailsReservation.detailCar.color}}</p>
+  </div>
+</div>
+
   </div>

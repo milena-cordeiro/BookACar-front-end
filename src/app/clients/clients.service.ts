@@ -14,7 +14,12 @@ export class ClientsService {
     return this.http.get<any>(this.url);
   }
 
+  public getById(id: number): Observable<any> {
+    return this.http.get<any>(`${this.url}/${id}`);
+  }
+
   public insertClient(client: any): Observable<any> {
     return this.http.post<any>(`${this.url}/insert`, client);
   }
+
 }

@@ -14,8 +14,13 @@ export class ReservationsComponent implements OnInit {
     private clientService: ClientsService,
     private carService: CarService) { }
 
-  clients: any = [];
-  cars: any = [];
+  details: boolean = false;
+  fieldButtom: string = 'Detalhar Reserva';
+
+  detailsReservation: any = {
+    detailClient: {},
+    detailCar: {},
+  };
 
   reservations: any = [];
   reservation: any = {
@@ -26,21 +31,7 @@ export class ReservationsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getClients();
-    this.getCars();
     this.getReservations();      
-  }
-
-  getClients() {
-    this.clientService.getClients().subscribe((data: any) => {
-      this.clients = data;
-    });
-  }
-
-  getCars() {
-    this.carService.getCars().subscribe((data: any) => {
-      this.cars = data;
-    });
   }
 
   getReservations() {
@@ -55,11 +46,49 @@ export class ReservationsComponent implements OnInit {
   insertReservation() {
     this.reservationService.insertReservation(this.reservation).subscribe((data: any) => {
       this.reservation = data;
-      console.log(data);
+      this.getReservations();
+      this.clearFields();
+      // console.log(data);
     },
     (error: any) => { 
       console.log(error);
     });
+  }
+
+  carDetails(carId: number) {
+    this.carService.getCarById(carId).subscribe((data: any) => {
+
+      this.detailsReservation.detailCar = data;
+    },
+    (error: any) => {
+      console.log(error);
+    });
+  }
+
+  clientDetails(clientId: number) {
+    this.clientService.getById(clientId).subscribe((data: any) => {
+      this.detailsReservation.detailClient = data;
+    },
+    (error: any) => {
+      console.log(error);
+    });
+  }
+
+  showDetails(clientId: number, carId: number) {
+    this.details = !this.details;
+    this.fieldButtom = this.details ? 'Ocultar Detalhes' : 'Detalhar Reserva';
+    this.carDetails(carId);
+    this.clientDetails(clientId);
+    // console.log(this.detailsReservation);
+  }
+
+  clearFields() {
+    this.reservation = {
+      carId: 0,
+      culientId: 0,
+      start: '',
+      end: '',
+    }
   }
 
 }

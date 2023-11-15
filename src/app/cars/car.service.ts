@@ -14,6 +14,10 @@ export class CarService {
     return this.http.get<any>(this.url);
   }
 
+  getCarById(id: number): Observable<any> {
+    return this.http.get<any>(`${this.url}/${id}`);
+  }
+
   insertCar(car: any): Observable<any> {
     return this.http.post<any>(this.url, car);
   }
