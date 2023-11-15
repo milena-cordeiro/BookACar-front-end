@@ -1,1 +1,36 @@
-<p>clients works!</p>
+<br>
+<br>
+
+<div>
+  <label for="name"></label>Nome:
+  <input id="name" type="text" [(ngModel)]="client.name">
+
+  <label for="emal"></label>E-mail:
+  <input id="email" type="text" [(ngModel)]="client.email">
+
+  <button type="button" (click)="insertClient()">Cadastrar</button>
+
+  <br>
+  <br>
+  
+  <div class="style-tabela">
+    <table>
+      <tbody>
+          <tr>
+              <th class="top center"><strong>Nome</strong></th>
+              <th class="top center"><strong>E-mail</strong></th>
+          </tr>
+          <tr *ngFor="let client of clients">
+              <td>{{client.name}}</td>
+              <td>{{client.email}}</td>
+          </tr>
+      </tbody>
+  </table>
+  </div>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
