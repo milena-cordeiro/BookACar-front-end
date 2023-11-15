@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ClientsService } from './clients.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { ClientsService } from './clients.service';
   templateUrl: './clients.component.html',
   styleUrls: ['./clients.component.css']
 })
-export class ClientsComponent {
+export class ClientsComponent implements OnInit {
 
   constructor(private clientService:ClientsService) {}
 
