@@ -20,7 +20,7 @@ export class ReservationsComponent implements OnInit {
   reservations: any = [];
   reservation: any = {
     carId: 0,
-    customerId: 0,
+    culientId: 0,
     start: '',
     end: '',
   }
@@ -55,6 +55,7 @@ export class ReservationsComponent implements OnInit {
   insertReservation() {
     this.reservationService.insertReservation(this.reservation).subscribe((data: any) => {
       this.reservation = data;
+      console.log(data);
     },
     (error: any) => { 
       console.log(error);

@@ -5,7 +5,7 @@
   <input id="date-end" type="text" [(ngModel)]="reservation.end">
 
   <label for="cliente"></label>ID do Cliente:
-  <input type="number" id="cliente" [(ngModel)]="reservation.customerId">
+  <input type="number" id="cliente" [(ngModel)]="reservation.clientId">
 
   <label for="carro"></label>ID do carro:
   <input type="number" id="carro" [(ngModel)]="reservation.carId">
@@ -21,17 +21,19 @@
       <tbody>
           <tr>
               <th class="top center"><strong>Data inicial</strong></th>
-              <th class="top center"><strong>Data sinal</strong></th>
+              <th class="top center"><strong>Data final</strong></th>
               <th class="top center"><strong>Cliente</strong></th>
               <th class="top center"><strong>Carro</strong></th>
           </tr>
-          <!-- <tr *ngFor="let car of cars">
-              <td>{{car.model}}</td>
-              <td>{{car.brand}}</td>
-              <td>{{car.color}}</td>
-              <td>{{car.year}}</td>
-              <td>{{car.plate}}</td>
-          </tr> -->
+          <tr *ngFor="let reservation of reservations">
+              <td>{{reservation.start}}</td>
+              <td>{{reservation.end}}</td>
+              <td>{{reservation.clientId}}</td>
+              <td>{{reservation.carId}}</td>
+              <td>
+                <button type="button">Detalhar Reserva</button>
+              </td>
+          </tr>
       </tbody>
   </table>
   </div>
