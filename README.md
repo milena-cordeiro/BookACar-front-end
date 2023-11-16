@@ -38,21 +38,48 @@ Inicie o servidor
 
 Essa é a tela de inicio da aplicação, onde o usuário pode navegar pelas páginas clicando nos links na navbar do header ou ser direcionado para a tela de gerenciamento de veiculos ao clicar no botão verde
 
-![App Screenshot](../front-end//src/assets/telaInicial.png)
+![App Screenshot](../front-end/src/assets/telaInicial.png)
 
 ## Tela de Cadastro de clientes
 
 Na tela de cadastro de clientes é possivel cadastrar um novo cliente, e visualizar de imediato a lista de clientes cadastrados.
-> Para cadastrar um cliente digite o **nome** e **email** validos, e clique no botão verde
+> Para cadastrar um cliente digite **nome** e **email** válidos, e clique no botão verde
 
-![App Screenshot](../front-end//src/assets/cadastrocliente.png)
+![App Screenshot](../front-end/src/assets/cadastrocliente.png)
+
+> Caso um dos campos não esteja correto (email formato inválido), um alerta será exibido na tela.
 
 
 ## Tela de Gerenciamento de Veiculos
 
-Na tela de gerenciamento de veiculos é possivel cadastrar um novo veiculo, e visualizar de imediato a lista de veiculos cadastrados. 
-> Para cadastro de veiculos é necessário preencher todos os campos obrigatórios, e clicar no botão verde.
+Na tela de gerenciamento de veiculos é possivel cadastrar um novo veiculo, e abaixo do formulario de cadastro é possivel ver a lista de veiculos cadastrados. 
+> Para cadastro de veiculos é necessário preencher todos os campos obrigatórios, e clicar no botão verde. 
 
-![App Screenshot](../front-end//src/assets/cadastrarcarro.png)
+![App Screenshot](../front-end/src/assets/cadastrarcarro.png)
+
+> Caso um dos campos não esteja correto (placa formato inválido), um alerta será exibido na tela.
+
+> A lista de cadastrados é atualizada automaticamente após o cadastro de um novo veiculo.
+
+![App Screenshot](../front-end/src/assets/todososcarroscadastrados.png)
+
+> Ao selecionar o filtro disponiveis é possivel ver apenas os veiculos disponiveis para reserva.
+
+![App Screenshot](../front-end/src/assets/filtrardispo.png)
+
 
 ## Tela de Gerenciamento de Reservas
+
+Na tela de gerenciamento de reservas é possivel fazer o cadastro de reservas, e abaixo do formulario de cadastro é possivel ver a lista de reservas cadastradas.
+> Para cadastro de reservas é necessário preencher todos os campos obrigatórios, e clica. No campo **data de inicio** e **data de fim** é necessário digitar a data no formato **YYYY/MM/DD**.
+
+![App Screenshot](../front-end/src/assets/cadastroreserva.png)
+
+> Após o cadastro de uma nova reserva, a lista de reservas é atualizada automaticamente.
+E ainda é possivel detalhar cada reserva cadastrada, clicando no botão **Detalhar Reserva**. Para ocultar as informações da reserva, basta clicar novamente no mesmo botão.
+
+![App Screenshot](../front-end/src/assets/tabelareserva1.png)
+
+![App Screenshot](../front-end/src/assets/detalhesreserva.png)
+
+
