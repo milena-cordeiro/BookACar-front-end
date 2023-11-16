@@ -55,22 +55,22 @@ Na tela de cadastro de clientes é possivel cadastrar um novo cliente, e visuali
 
 ##
 
-## Tela de Gerenciamento de Veiculos
+## Tela de Gerenciamento de Veículos
 
-Na tela de gerenciamento de veiculos é possivel cadastrar um novo veiculo, e abaixo do formulario de cadastro é possivel ver a lista de veiculos cadastrados. 
-> Para cadastro de veiculos é necessário preencher todos os campos obrigatórios, a placa deve ser no formato **LLLNNNN** e clicar no botão verde. 
+Na tela de gerenciamento de veículos é possivel cadastrar um novo veículo, e abaixo do formulário de cadastro é possivel ver a lista de veículos cadastrados. 
+> Para cadastro é necessário preencher todos os campos obrigatórios, a placa deve ser no formato **LLLNNNN** (3 letras 4 números) e clicar no botão verde. 
 
 ![App Screenshot](./src/assets/cadastrarcarro.png)
 
 > Caso um dos campos não esteja correto (placa formato inválido), um alerta será exibido na tela.
 
-![App Screenshot](./src/assets/erroplaca.png)
+![App Screenshot](./src/assets/placaerr.png)
 
-> A lista de cadastrados é atualizada automaticamente após o cadastro de um novo veiculo.
+> A lista de cadastrados é atualizada automaticamente após o cadastro de um novo veículo. Para remover é só clicar no botão vermelho **Remover** que estiver habilitado.
 
 ![App Screenshot](./src/assets/todososcarroscadastrados.png)
 
-> Ao selecionar ao filtrar por disponiveis é possivel ver apenas os veiculos disponiveis para reserva.
+> Ao selecionar no **Filtre por:** "disponiveis" é possivel ver apenas os veículos disponiveis para reserva.
 
 ![App Screenshot](./src/assets/filtrardispo.png)
 
@@ -78,17 +78,17 @@ Na tela de gerenciamento de veiculos é possivel cadastrar um novo veiculo, e ab
 
 ## Tela de Gerenciamento de Reservas
 
-Na tela de gerenciamento de reservas é possivel fazer o cadastro de reservas, e abaixo do formulario de cadastro é possivel ver a lista de reservas cadastradas.
-> Para cadastro de reservas é necessário preencher todos os campos obrigatórios. No campo **data inicial** e **data final** é necessário digitar a data no formato **YYYY/MM/DD**.
+Na tela de gerenciamento de reservas é possivel fazer o cadastro de reservas, e abaixo do formulário de cadastro é possivel ver a lista de reservas cadastradas.
+> Para cadastro é necessário preencher todos os campos obrigatórios. No campo **data inicial** e **data final** é necessário digitar a data no formato **YYYY/MM/DD**.
 
 ![App Screenshot](./src/assets/cadastroreserva.png)
 
->Caso o formato das datas esteja invalido, um alerta será exibido na tela.
+>Caso o formato das datas não esteja correto, um alerta será exibido na tela.
 
 ![App Screenshot](./src/assets/erroreservadataerrada.png)
 
 > Após o cadastro de uma nova reserva, a lista de reservas é atualizada automaticamente.
-E ainda é possivel detalhar cada reserva cadastrada, clicando no botão **Detalhar Reserva**. Para ocultar as informações da reserva, basta clicar novamente no mesmo botão.
+E ainda é possivel detalhar cada reserva cadastrada, clicando no botão **Detalhar Reserva**. Para ocultar as informações, basta clicar novamente no mesmo botão.
 
 ![App Screenshot](./src/assets/detalhesreserva.png)
 
@@ -101,7 +101,7 @@ sem ele não será possivel usufruir das funcinalidades do projeto, então é re
 # Melhorias Futuras
 
 Há melhorias e implementações que podem ser feitas nessa aplicação, que devido ao tempo de entrega deste projeto não foram possíveis de serem realizadas. Porém serão feitas futuramente.
-* Implementação de testes;
+* Implementação de testes unitários;
 * implementação da funcionalidade de editar, excluir e cancelar reservas, bem como editar e excluir clientes;
 * Implementação de um sistema de login e autenticação de usuários;
 * Tela Not Found;
