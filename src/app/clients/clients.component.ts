@@ -16,13 +16,17 @@ export class ClientsComponent implements OnInit {
     email: '',
   };
 
+  loading: boolean = false;
+
   ngOnInit(): void {
     this.getClients();
   }
 
   getClients() {
+    this.loading = true;
     this.clientService.getClients().subscribe((response: any) => {
       this.clients = response;
+      this.clearFields();
     },
     (error: any) => {
       console.log(error);
@@ -38,6 +42,7 @@ export class ClientsComponent implements OnInit {
       return;
     }
 
+    this.loading = true;
     this.clientService.insertClient(this.client).subscribe((response: any) => {
       alert('Cliente inserido com sucesso!');
       this.getClients();
@@ -45,6 +50,12 @@ export class ClientsComponent implements OnInit {
     (error: any) => {
       console.log(error);
     });
+  }
+
+  clearFields() {
+    this.client.name = '';
+    this.client.email = '';
+    this.loading = false;
   }
 
 }
