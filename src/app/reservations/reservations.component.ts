@@ -45,12 +45,14 @@ export class ReservationsComponent implements OnInit {
 
   insertReservation() {
     this.reservationService.insertReservation(this.reservation).subscribe((data: any) => {
+      alert('Reserva cadastrada com sucesso!')
       this.reservation = data;
       this.getReservations();
       this.clearFields();
       // console.log(data);
     },
     (error: any) => { 
+      alert('Erro ao cadastrar reserva!')
       console.log(error);
     });
   }
