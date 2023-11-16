@@ -43,7 +43,7 @@ Essa é a tela de inicio da aplicação, onde o usuário pode navegar pelas pág
 ## Tela de Cadastro de clientes
 
 Na tela de cadastro de clientes é possivel cadastrar um novo cliente, e visualizar de imediato a lista de clientes cadastrados.
-> Para cadastrar um cliente digite **nome** e **email** válidos, e clique no botão verde
+> Para cadastrar um cliente digite **nome** e **email** válidos, e clique no botão cadastrar.
 
 ![App Screenshot](./src/assets/cadastrocliente.png)
 
@@ -68,17 +68,17 @@ Na tela de gerenciamento de veiculos é possivel cadastrar um novo veiculo, e ab
 
 ![App Screenshot](./src/assets/todososcarroscadastrados.png)
 
-> Ao selecionar o filtro disponiveis é possivel ver apenas os veiculos disponiveis para reserva.
+> Ao selecionar ao filtrar por disponiveis é possivel ver apenas os veiculos disponiveis para reserva.
 
-![App Screenshot](front-end/src/assets/veiculosdisponiveis.png)
+![App Screenshot](./src/assets/veiculosdisponiveis.png)
 
 
 ## Tela de Gerenciamento de Reservas
 
 Na tela de gerenciamento de reservas é possivel fazer o cadastro de reservas, e abaixo do formulario de cadastro é possivel ver a lista de reservas cadastradas.
-> Para cadastro de reservas é necessário preencher todos os campos obrigatórios, e clica. No campo **data de inicio** e **data de fim** é necessário digitar a data no formato **YYYY/MM/DD**.
+> Para cadastro de reservas é necessário preencher todos os campos obrigatórios. No campo **data inicial** e **data final** é necessário digitar a data no formato **YYYY/MM/DD**.
 
-![App Screenshot](../front-end/src/assets/cadastroreserva.png)
+![App Screenshot](./src/assets/cadastroreserva.png)
 
 >Caso o formato das datas esteja invalido, um alerta será exibido na tela.
 
@@ -89,6 +89,16 @@ E ainda é possivel detalhar cada reserva cadastrada, clicando no botão **Detal
 
 ![App Screenshot](./src/assets/tabelareserva1.png)
 
-![App Screenshot](./front-end/src/assets/detalhesreserva.png)
+![App Screenshot](./src/assets/detalhesreserva.png)
+
+#Melhorias Futuras
+
+Há melhorias e implementações que podem ser feitas nessa aplicação, que devido ao tempo de entrega deste projeto não foram possíveis de serem realizadas. Porém serão feitas futuramente.
+* Implementação de testes;
+* implementação da funcionalidade de editar, excluir e cancelar reservas, bem como editar e excluir clientes;
+* Implementação de um sistema de login e autenticação de usuários;
+* Hosperdar a aplicação em um servidor para que seja possivel acessar de qualquer lugar;
+
+E essas são algumas das implementações que pretendo fazer futuramente. Angular é um framework muito interessante e que permite a criação de aplicações incríveis e com muitas funcionalidades, que venho aprendendo a pouco tempo, então ainda estou descobrindo como algumas coisas funcionam, e conforme for adquirindo mais conhecimento, poderei aplicar nesse e em outros projetos tornando-os ainda melhores.
 
 
