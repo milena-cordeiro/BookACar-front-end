@@ -39,6 +39,15 @@ h1 {
 .container button:hover {
   background-color: #45a049;
 }
+
+.container-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
 .card {
   text-align: center;
   border-radius: 5px;
