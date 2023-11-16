@@ -55,7 +55,7 @@ Na tela de cadastro de clientes é possivel cadastrar um novo cliente, e visuali
 Na tela de gerenciamento de veiculos é possivel cadastrar um novo veiculo, e abaixo do formulario de cadastro é possivel ver a lista de veiculos cadastrados. 
 > Para cadastro de veiculos é necessário preencher todos os campos obrigatórios, e clicar no botão verde. 
 
-<img src="/front-end/src/assets/cadastrarcarro.png" alt="Texto Alternativo">
+<img src="/assets/cadastrarcarro.png" alt="Texto Alternativo">
 
 > Caso um dos campos não esteja correto (placa formato inválido), um alerta será exibido na tela.
 
