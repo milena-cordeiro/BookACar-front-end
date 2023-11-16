@@ -21,39 +21,49 @@ export class CarsComponent implements OnInit{
 
   selectedFilter: string = '';
 
+  loading: boolean = false;
+
   ngOnInit() {
     this.getCars();
   }
 
   getCars() {
+    this.loading = true;
     this.carService.getCars().subscribe((response: any) => {
       this.cars = response;
+      this.clearFields();
     },
     (error: any) => {
+      this.loading = false;
       console.log(error);
     });
   }
 
   insertCar() {
+    this.loading = true;
     this.carService.insertCar(this.car).subscribe((response: any) => {
       alert('Carro inserido com sucesso!');
-      this.getCars();
       this.clearFields();
+      this.getCars();
     },
     (error: any) => {
+      this.loading = false;
       alert('Erro ao inserir carro! Preencha todos os campos corretamente.');
       // console.log(error);
     });
   }
 
   removeCar(id: number) {
+    this.loading = true;
     this.carService.deleteCar(id).subscribe((response: any) => {
       alert('Carro removido com sucesso!');
+      this.clearFields();
       this.getCars();
     }
     ,
     (error: any) => {
       // console.log(error);
+      this.loading = false;
       alert("Erro ao remover carro! Certifique-se de que ele está Disponivel.");
     })
   }
@@ -94,6 +104,7 @@ clearFields() {
   this.car.plate = '';
   this.car.brand = '';
   this.car.available = '';
+  this.loading = false;
 }
 
 }
