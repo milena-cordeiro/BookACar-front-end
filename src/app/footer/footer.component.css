@@ -1,0 +1,20 @@
+.app-footer {
+  background-color: #33333381; 
+  color: #fff;
+  padding: 10px; 
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.social-media a {
+  color: #fff; 
+  text-decoration: none; 
+  margin-right: 15px; 
+  font-weight: bold; 
+  font-size: 14px; 
+}
+
+.copyright {
+  font-size: 14px;
+}
