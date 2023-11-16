@@ -40,6 +40,8 @@ Essa é a tela de inicio da aplicação, onde o usuário pode navegar pelas pág
 
 ![App Screenshot](./src/assets/telaInicial.png )
 
+##
+
 ## Tela de Cadastro de clientes
 
 Na tela de cadastro de clientes é possivel cadastrar um novo cliente, e visualizar de imediato a lista de clientes cadastrados.
@@ -51,7 +53,7 @@ Na tela de cadastro de clientes é possivel cadastrar um novo cliente, e visuali
 
 ![App Screenshot](./src/assets/errodeemail.png)
 
-
+##
 
 ## Tela de Gerenciamento de Veiculos
 
@@ -70,8 +72,9 @@ Na tela de gerenciamento de veiculos é possivel cadastrar um novo veiculo, e ab
 
 > Ao selecionar ao filtrar por disponiveis é possivel ver apenas os veiculos disponiveis para reserva.
 
-![App Screenshot](./src/assets/veiculosdisponiveis.png)
+![App Screenshot](./src/assets/filtrardispo.png)
 
+##
 
 ## Tela de Gerenciamento de Reservas
 
@@ -87,17 +90,22 @@ Na tela de gerenciamento de reservas é possivel fazer o cadastro de reservas, e
 > Após o cadastro de uma nova reserva, a lista de reservas é atualizada automaticamente.
 E ainda é possivel detalhar cada reserva cadastrada, clicando no botão **Detalhar Reserva**. Para ocultar as informações da reserva, basta clicar novamente no mesmo botão.
 
-![App Screenshot](./src/assets/tabelareserva1.png)
-
 ![App Screenshot](./src/assets/detalhesreserva.png)
 
-#Melhorias Futuras
+
+
+# Relacionados
+Como mencionado anteriormente no inicio, este projeto está integrado com uma API Java neste repositório [AQUI](https://github.com/milena-cordeiro/BookACar)
+sem ele não será possivel usufruir das funcinalidades do projeto, então é recomendado que suba essa API antes de rodar esse projeto.
+
+# Melhorias Futuras
 
 Há melhorias e implementações que podem ser feitas nessa aplicação, que devido ao tempo de entrega deste projeto não foram possíveis de serem realizadas. Porém serão feitas futuramente.
 * Implementação de testes;
 * implementação da funcionalidade de editar, excluir e cancelar reservas, bem como editar e excluir clientes;
 * Implementação de um sistema de login e autenticação de usuários;
-* Hosperdar a aplicação em um servidor para que seja possivel acessar de qualquer lugar;
+* Tela Not Found;
+* Hosperdar a aplicação em um servidor para que seja possivel acessar de qualquer lugar.
 
 E essas são algumas das implementações que pretendo fazer futuramente. Angular é um framework muito interessante e que permite a criação de aplicações incríveis e com muitas funcionalidades, que venho aprendendo a pouco tempo, então ainda estou descobrindo como algumas coisas funcionam, e conforme for adquirindo mais conhecimento, poderei aplicar nesse e em outros projetos tornando-os ainda melhores.
 
