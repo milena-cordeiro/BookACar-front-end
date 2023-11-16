@@ -1,7 +1,7 @@
 <h1>Reservas</h1>
 
-  
-  <label for="date-start"></label>Data inicial:
+  <div class="container">
+    <label for="date-start"></label>Data inicial:
   <input id="date-start" type="text" [(ngModel)]="reservation.start" placeholder="Formato yyy-mm-dd">
 
   <label for="date-end"></label>Data final:
@@ -11,9 +11,12 @@
   <input type="number" id="cliente" [(ngModel)]="reservation.clientId" placeholder="Digite um ID valido">
 
   <label for="carro"></label>ID do carro:
-  <input type="number" id="carro" [(ngModel)]="reservation.carId">
+  <input type="number" id="carro" [(ngModel)]="reservation.carId" placeholder="Digite um ID valido">
 
   <button type="button" (click)="insertReservation()">Reservar</button>
+
+  </div>
+  
 
   <br>
   <br>
