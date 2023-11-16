@@ -38,10 +38,21 @@ Inicie o servidor
 
 Essa é a tela de inicio da aplicação, onde o usuário pode navegar pelas páginas clicando nos links na navbar do header ou ser direcionado para a tela de gerenciamento de veiculos ao clicar no botão verde
 
-![App Screenshot](assets/telaInicial.png)
+![App Screenshot](../front-end//src/assets/telaInicial.png)
 
 ## Tela de Cadastro de clientes
 
+Na tela de cadastro de clientes é possivel cadastrar um novo cliente, e visualizar de imediato a lista de clientes cadastrados.
+> Para cadastrar um cliente digite o **nome** e **email** validos, e clique no botão verde
+
+![App Screenshot](../front-end//src/assets/cadastrocliente.png)
+
+
 ## Tela de Gerenciamento de Veiculos
+
+Na tela de gerenciamento de veiculos é possivel cadastrar um novo veiculo, e visualizar de imediato a lista de veiculos cadastrados. 
+> Para cadastro de veiculos é necessário preencher todos os campos obrigatórios, e clicar no botão verde.
+
+![App Screenshot](../front-end//src/assets/cadastrarcarro.png)
 
 ## Tela de Gerenciamento de Reservas
