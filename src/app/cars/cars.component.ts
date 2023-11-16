@@ -40,6 +40,15 @@ export class CarsComponent implements OnInit{
   }
 
   insertCar() {
+    //verifica se a placa informada tem formato válido
+    const regex: RegExp = /^[A-Z]{3}[0-9]{4}$/;
+    const placa: string = this.car.plate.toUpperCase();
+
+    if(placa.length != 7 || !regex.test(placa)) {
+      alert('Placa inválida!');
+      return;
+    }
+
     this.loading = true;
     this.carService.insertCar(this.car).subscribe((response: any) => {
       alert('Carro inserido com sucesso!');
