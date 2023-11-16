@@ -4,13 +4,16 @@
 <br>
 
 <div>
-  <label for="name"></label>Nome:
-  <input id="name" type="text" [(ngModel)]="client.name">
+  <div class="container">
+    <label for="name"></label>Nome:
+    <input id="name" type="text" [(ngModel)]="client.name" placeholder="Nome do cliente">
+  
+    <label for="emal"></label>E-mail:
+    <input id="email" type="text" [(ngModel)]="client.email" placeholder="E-mail do cliente">
+  
+    <button type="button" (click)="insertClient()">Cadastrar</button>
+  </div>
 
-  <label for="emal"></label>E-mail:
-  <input id="email" type="text" [(ngModel)]="client.email">
-
-  <button type="button" (click)="insertClient()">Cadastrar</button>
 
   <br>
   <br>
