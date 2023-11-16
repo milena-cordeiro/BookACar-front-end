@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  redirectPage() {
+    window.location.href = '/clients';
+  }
+
 }

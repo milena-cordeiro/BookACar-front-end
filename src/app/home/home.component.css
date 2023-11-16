@@ -1,0 +1,49 @@
+/* home.component.css */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+.section {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.section h2 {
+  color: #555;
+  font-size: 24px;
+  text-align: center;
+}
+
+.section p {
+  color: #777;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilos adicionais para a plataforma de reservas */
+.reservation-button {
+  display: block;
+  margin: 0 auto;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.reservation-button:hover {
+  background-color: #45a049;
+}

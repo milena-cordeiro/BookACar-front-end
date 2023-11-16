@@ -1,9 +1,10 @@
 h1 {
   text-align: center;
-}
 
+}
 .container {
-  width: 50%;
+  width: 70%;
+  max-width: 400px; /* Defina uma largura máxima para o formulário */
   margin: 20px auto;
   background-color: #fff;
   padding: 20px;
@@ -53,7 +54,7 @@ h1 {
 }
 
 .style-tabela th {
-  background-color: #4caf50;
+  background-color: #347a36ad;
   color: white;
 }
 
