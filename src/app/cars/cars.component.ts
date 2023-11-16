@@ -38,9 +38,11 @@ export class CarsComponent implements OnInit{
     this.carService.insertCar(this.car).subscribe((response: any) => {
       alert('Carro inserido com sucesso!');
       this.getCars();
+      this.clearFields();
     },
     (error: any) => {
-      console.log(error);
+      alert('Erro ao inserir carro! Preencha todos os campos corretamente.');
+      // console.log(error);
     });
   }
 
@@ -51,8 +53,8 @@ export class CarsComponent implements OnInit{
     }
     ,
     (error: any) => {
-      console.log(error);
-      alert("Erro ao remover carro! Certifique-se de que ele não está reservado.");
+      // console.log(error);
+      alert("Erro ao remover carro! Certifique-se de que ele está Disponivel.");
     })
   }
 
@@ -61,7 +63,7 @@ export class CarsComponent implements OnInit{
       this.cars = response;
     },
     (error: any) => {
-      console.log(error);
+      // console.log(error);
       this.getCars();
     });
   }
@@ -76,5 +78,22 @@ export class CarsComponent implements OnInit{
 
 }
 
+setAvailable() {
+  if(this.car.available == 'true') {
+    this.car.available = true;
+  } else {  
+    this.car.available = false;
+  }
+}
+
+
+clearFields() {
+  this.car.model = '';
+  this.car.year = 0;
+  this.car.color = '';
+  this.car.plate = '';
+  this.car.brand = '';
+  this.car.available = '';
+}
 
 }

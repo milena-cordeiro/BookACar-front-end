@@ -1,72 +1,78 @@
-<br>
-<br>
 
-<div>
-  <label for="model"></label>Modelo:
-  <input id="model" type="text" [(ngModel)]="car.model">
-
-  <label for="brand"></label>Marca:
-  <input id="brand" type="text" [(ngModel)]="car.brand">
-
-  <label for="cor"></label>Cor:
-  <input id="cor" type="text" [(ngModel)]="car.color">
-
-  <label for="ano"></label>Ano de Fabricação:
-  <input id="ano" type="text" [(ngModel)]="car.year">
-
-  <label for="plate"></label>Placa:
-  <input id="plate" type="text" [(ngModel)]="car.plate">
-
-  <label for="dispo"></label>Disponivel:
-  <input id="dispo" type="text" [(ngModel)]="car.available">
-
-  <button type="button" (click)="insertCar()">Cadastrar</button>
-
-  <br>
-  <br>
-  <br>
+  <h1>Gerenciamento de Carros</h1>
 
   <div>
-    <label for="filter">Filtre por:</label>
-    <select [(ngModel)]="selectedFilter" (ngModelChange)="filterCars()" id="filter">
-      <option value="availables">Disponiveis</option>
-      <option value="all">Todos</option>
-    </select>
+    <div class="container">
+      <label for="model"></label>Modelo:
+      <input id="model" type="text" [(ngModel)]="car.model" placeholder="Campo obrigatório">
+
+      <label for="brand"></label>Marca:
+      <input id="brand" type="text" [(ngModel)]="car.brand" placeholder="Campo obrigatório">
+
+      <label for="cor"></label>Cor:
+      <input id="cor" type="text" [(ngModel)]="car.color" placeholder="Opcional">
+
+      <label for="ano"></label>Ano de Fabricação:
+      <input id="ano" type="number" [(ngModel)]="car.year" placeholder="Opcional">
+
+      <label for="plate"></label>Placa:
+      <input id="plate" type="text" [(ngModel)]="car.plate" placeholder="Campo obrigatório">
+
+      <label for="available">Disponivel:</label>
+      <select [(ngModel)]="car.available" (ngModelChange)="setAvailable()" id="filter">
+        <option value="true">Sim</option>
+        <option value="false">Não</option>
+      </select>
+
+      <button type="button" (click)="insertCar()">Cadastrar</button>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+
+    <div>
+      <label for="filter">Filtre por:</label>
+      <select [(ngModel)]="selectedFilter" (ngModelChange)="filterCars()" id="filter">
+        <option value="availables">Disponiveis</option>
+        <option value="all">Todos</option>
+      </select>
+
+      <br>
+      <br>
+
+      <a href="/reservations">Fazer Reserva</a>
+
+    </div>
+
 
     <br>
     <br>
 
-    <a href="/reservations">Fazer Reserva</a>
-
-  </div>
-
-
-  <br>
-  <br>
-  
-  <div class="style-tabela">
-    <table>
-      <tbody>
+    <div class="style-tabela">
+      <table>
+        <tbody>
           <tr>
-              <th class="top center"><strong>Modelo</strong></th>
-              <th class="top center"><strong>Marca</strong></th>
-              <th class="top center"><strong>Cor</strong></th>
-              <th class="top center"><strong>Ano de Fabicação</strong></th>
-              <th class="top center"><strong>Placa</strong></th>
-              <th class="top center"><strong>Ações</strong></th>
+            <th class="top center"><strong>Modelo</strong></th>
+            <th class="top center"><strong>Marca</strong></th>
+            <th class="top center"><strong>Cor</strong></th>
+            <th class="top center"><strong>Ano de Fabicação</strong></th>
+            <th class="top center"><strong>Placa</strong></th>
+            <th class="top center"><strong>Ações</strong></th>
           </tr>
           <tr *ngFor="let car of cars">
-              <td>{{car.model}}</td>
-              <td>{{car.brand}}</td>
-              <td>{{car.color}}</td>
-              <td>{{car.year}}</td>
-              <td>{{car.plate}}</td>
-              <td>
-                <button type="button" (click)="removeCar(car.carID)">Remover</button>
-              </td>
+            <td>{{car.model}}</td>
+            <td>{{car.brand}}</td>
+            <td>{{car.color}}</td>
+            <td>{{car.year}}</td>
+            <td>{{car.plate}}</td>
+            <td>
+              <button type="button" (click)="removeCar(car.carID)" [disabled]="!car.available">Remover</button>
+            </td>
           </tr>
-      </tbody>
-  </table>
-  </div>
+        </tbody>
+      </table>
+    </div>
 
-</div>
+  </div>
